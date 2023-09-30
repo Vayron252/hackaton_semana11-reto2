@@ -1,0 +1,99 @@
+*,
+*::after, *::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+}
+
+.contenedor {
+    background-color: #55629a;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.todolist {
+    background-color: #9ca1e9;
+    padding: 1rem;
+    width: 95%;
+    max-width: 60rem;
+    margin: 2rem 0;
+    border-radius: .5rem;
+    height: 95vh;
+}
+.todolist__titulo {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    letter-spacing: .2rem;
+    color: #1b2644;
+    font-family: 'Bebas Neue', sans-serif;
+}
+.todolist__agregar {
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+    margin-bottom: .8rem;
+}
+.agregar__tarea {
+    height: 3rem;
+    border-radius: .3rem;
+    border: none;
+    padding: .5rem 1rem;
+    outline: none;
+    font-size: 1.2rem;
+}
+.agregar__accion {
+    padding: .5rem 0;
+    background-color: #e6dced;
+    outline: none;
+    border: none;
+    border-radius: .3rem;
+    font-size: .9rem;
+    font-weight: bold;
+    color: #2b3141;
+    cursor: pointer;
+}
+.todolist__listado {
+    font-family: 'Teko', sans-serif;
+    background-color: white;
+    padding: 1rem;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.tarea {
+    background-color: #e6dced;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem .5rem;
+    border-radius: .3rem;
+}
+.tarea__completada {
+    width: 25px;
+    height: 25px;
+    background-color: red;
+    flex-basis: 13%;
+}
+.tarea__descripcion {
+    flex-basis: 70%;
+    font-size: 1.3rem;
+}
+.tarea__eliminar {
+    flex-basis: 12%;
+    background-color: rgb(173, 36, 36);
+    border: none;
+    outline: none;
+    color: white;
+    padding: .8rem 0;
+    border-radius: .3rem;
+    cursor: pointer;
+}
