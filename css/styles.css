@@ -6,26 +6,25 @@
 }
 
 body {
-
+    background-color: #55629a;
 }
 
 .contenedor {
-    background-color: #55629a;
-    height: 100vh;
+    /* height: calc(100vh - 4rem); */
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 95%;
+    max-width: 40rem;
 }
 
 .todolist {
     background-color: #9ca1e9;
     padding: 1rem;
-    width: 95%;
-    max-width: 60rem;
     margin: 2rem 0;
+    /* width: 95%; */
+    /* max-width: 60rem; */
+    /* margin: 2rem 0; */
     border-radius: .5rem;
-    height: 95vh;
+    height: 100%;
 }
 .todolist__titulo {
     text-align: center;
@@ -41,24 +40,38 @@ body {
     gap: .3rem;
     margin-bottom: .8rem;
 }
+@media (min-width: 768px) {
+    .todolist__agregar {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: .5rem;
+    }
+}
 .agregar__tarea {
-    height: 3rem;
     border-radius: .3rem;
     border: none;
-    padding: .5rem 1rem;
+    padding: 1rem 1rem;
     outline: none;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    flex-basis: 70%;
 }
 .agregar__accion {
-    padding: .5rem 0;
+    flex-basis: 30%;
     background-color: #e6dced;
+    padding: 1rem 0;
     outline: none;
     border: none;
     border-radius: .3rem;
-    font-size: .9rem;
+    font-size: 1rem;
     font-weight: bold;
     color: #2b3141;
     cursor: pointer;
+}
+@media (min-width: 768px) {
+    .agregar__accion {
+        flex-basis: 30%;
+        padding: 0 3rem;
+    }
 }
 .todolist__listado {
     font-family: 'Teko', sans-serif;
@@ -76,24 +89,27 @@ body {
     align-items: center;
     padding: 1rem .5rem;
     border-radius: .3rem;
+    gap: .5rem;
 }
 .tarea__completada {
     width: 25px;
     height: 25px;
     background-color: red;
-    flex-basis: 13%;
 }
 .tarea__descripcion {
-    flex-basis: 70%;
     font-size: 1.3rem;
+    width: 100%;
+}
+.tarea__descripcion--completado {
+    text-decoration: line-through;
+    color: green;
 }
 .tarea__eliminar {
-    flex-basis: 12%;
     background-color: rgb(173, 36, 36);
     border: none;
     outline: none;
     color: white;
-    padding: .8rem 0;
+    padding: .8rem 1rem;
     border-radius: .3rem;
     cursor: pointer;
 }
